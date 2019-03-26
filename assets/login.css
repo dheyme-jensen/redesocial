@@ -1,0 +1,69 @@
+.centered{
+    position: absolute;
+    width: 400px;
+    margin: auto;
+    top: 10%;
+    bottom: initial;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 24px;
+    border-radius: 3px;
+}
+
+.input-fields{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin:auto;
+    padding: 10px 0;
+}
+
+.email, .password{
+    border-radius: 30px;
+    border: 1px solid;
+    width: 70%;
+    padding: 15px;
+    margin: 5px;
+    outline: none;
+    background-color: rgba(245, 62, 62, 0.0);
+}
+
+.submit-button{
+    background-color: #009F9D;
+    color: #FFFF;
+    width: 75%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    margin-top: 3vh;
+    cursor: pointer;
+}
+
+body{
+    background-image: url("/assets/img/login_bg.jpg");
+    background-size: cover;
+}
+
+.fa-facebook-square{
+    color: #3b5998;
+    font-size: 3em;
+    padding: 0 5px;
+}
+
+.fa-google{
+    color: #ea4335;
+    font-size: 3em;
+    padding: 0 5px;
+}
+
+.social-networks{
+margin-bottom: 2em;
+}
+
+.signup{
+    color: #000000;
+    text-decoration: none;
+}

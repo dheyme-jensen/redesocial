@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/login.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+    <div class="centered">
+        <h1 class="title">GrowUp</h1>
+        <h3 id="logged"></h3>
+        <button class="botao">Sign Out</button>
+        <div class="input-fields">
+            <input class="email" type="email" placeholder="E-mail">
+            <input class="password" type="password" placeholder="Senha">
+            <input class="submit-button" type="submit" value="Entrar">
+        </div>
+        <p>-ou-</p>
+        <div class="social-networks">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-google"></i>
+        </div>
+        <a class="signup" href="#">Cadastre-se</a>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="src/connection.js"></script>
+    <script src="src/login.js"></script>
+</body>
+</html>
