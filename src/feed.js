@@ -27,7 +27,7 @@ $(document).ready(function(){
                 });
                     
                 $(`button[data-edit-id='${childKey}']`).click(function(){
-                    let newText =  prompt(`altere seu texto: ${childData}`);
+                    let newText =  prompt(`altere seu texto: ${childData.text}`);
                     $(`span[data-text-id=${childKey}]`).text(newText);
                     
                     database.ref(`questions/${USER_ID}/${childKey}`).update({
