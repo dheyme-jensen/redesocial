@@ -1,8 +1,6 @@
 .centered{
     position: absolute;
-    width: 400px;
     margin: auto;
-    top: 10%;
     bottom: initial;
     left: 0;
     right: 0;
@@ -66,4 +64,38 @@ margin-bottom: 2em;
 .signup{
     color: #000000;
     text-decoration: none;
+}
+
+.google-auth, .facebook-auth{
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.0); 
+}
+
+/*----Media Queries ----*/
+
+@media (max-width: 2000px) {
+    .centered{
+     width: 400px;
+     top: 10%;
+    }
+}
+@media (max-width: 992px) {
+    .centered{
+     width: 400px;
+     top: 10%;
+    }
+}
+@media (max-width: 768px){
+    .centered{
+        width: 300px;
+        top: 10%;
+       }
+}
+
+@media (max-width: 576px){
+    .centered{
+        width: 200px;
+        top: 20%;
+       }
 }
