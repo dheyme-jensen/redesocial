@@ -11,12 +11,13 @@ $(document).ready(() => {
                 $('#timeLine').prepend(`
                     <div>
                         <span>${childData.text}</span>
-                        <input type='button' value='Excluir' data-task-id=${childKey} />
+                        <button data-questions-id=${childKey}> Excluir</button>
                     </div>
                 `);  
-                $(`input[data-task-id='${childKey}']`).click(() => {
+                $(`button[data-questions-id='${childKey}']`).click(() => {
                     $(this).parent().remove();
-                });              
+                }); 
+                             
             });
         });
 
@@ -26,32 +27,32 @@ $(document).ready(() => {
 
         let newPost = $('#post').val(); 
 
-        let taskFromDB = database.ref('questions/' + USER_ID).push({
+        let questionsFromDB = database.ref('questions/' + USER_ID).push({
             text: newPost
         });
 
         $('#timeLine').prepend(`
             <div>
-                <span data-text-id="${taskFromDB.key}">${newPost}</span>
-                <input type='button' value='Excluir' data-delete-id="${taskFromDB.key}" />
-                <input type='button' value='Editar' data-edit-id="${taskFromDB.key}" />
+                <span data-text-id="${questionsFromDB.key}">${newPost}</span>
+                <button data-delete-id="${questionsFromDB.key}"> Excluir</button>
+                <button data-edit-id="${questionsFromDB.key}"> Editar</button>
             </div>
         `);
     
-        $(`input[data-delete-id='${taskFromDB.key}']`).click(() => {
-            $(this).closest('div').remove();
+        $(`button[data-delete-id=${questionsFromDB.key}]`).click(function(){
+            $(this).parent().remove();
+            database.ref('questions/' + questionsFromDB.key).remove();
         });
         $('#post').val('');
 
-        $(`input[data-edit-id='${taskFromDB.key}']`).click(() => {
+        $(`button[data-edit-id='${questionsFromDB.key}']`).click(function(){
            let newText =  prompt(`altere seu texto: ${newPost}`);
-           $(`span[data-text-id=${taskFromDB.key}]`).html(newText);
-           database.ref('questions/' + taskFromDB.key).update({
+           $(`span[data-text-id=${questionsFromDB.key}]`).text(newText);
+           database.ref('questions/' + questionsFromDB.key).update({
                newPost: newText
-           })
+           });
            
         });
-        $('#post').val('');
     });
 
     $('#post').keyup(() => {
