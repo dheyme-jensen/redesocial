@@ -1,4 +1,3 @@
-
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
         document.getElementById('logged').style.display = 'block';
@@ -14,7 +13,6 @@ firebase.auth().onAuthStateChanged(function (user) {
 /* document.querySelector('.submit-button').addEventListener('click', function () {
     let userEmail = document.querySelector('.email').value;
     let password = document.querySelector('.password').value;
-
     firebase.auth().signInWithEmailAndPassword(userEmail, password).catch(function (error) {
         window.alert('Error: ' + error.code);
     })
@@ -24,7 +22,11 @@ firebase.auth().onAuthStateChanged(function (user) {
     let userEmail = document.querySelector('.email').value;
     let password = document.querySelector('.password').value;
 
-    firebase.auth().signInWithEmailAndPassword(userEmail, password).catch(function (error) {
+    firebase.auth().signInWithEmailAndPassword(userEmail, password)
+    .then(function(response) {
+        window.location = "feed.html?id=" + response.user.uid;
+    })
+    .catch(function (error) {
         window.alert('Error: ' + error.code);
     })
 })

@@ -3,20 +3,21 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/login.css">
+    <title>Login</title>
+    <link rel="sttlesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcnd.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/login.css">
 </head>
 <body>
-    <div class="centered">
+    <div class="centered centered-expand-md">
         <h1 class="title">GrowUp</h1>
-        <h3 id="logged"></h3>
-        <button class="botao">Sign Out</button>
+        <button id="botao">Sign Out</button>
         <div class="input-fields">
             <input class="email" type="email" placeholder="E-mail">
             <input class="password" type="password" placeholder="Senha">
-            <input class="submit-button" type="submit" value="Entrar">
+            <input class="submit-button" type="submit" value="Entrar" data-toggle="collapse">
         </div>
         <p>-ou-</p>
         <div class="social-networks">
