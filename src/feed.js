@@ -11,10 +11,10 @@ $(document).ready(function(){
                 $('.timeline').prepend(`
                     <div>
                         <span>${childData.text}</span>
-                        <input type='button' value='Excluir' data-questions-id=${childKey} />
+                        <button data-questions-id=${childKey} > Excluir </button>
                     </div>
                 `);  
-                $(`input[data-questions-id='${childKey}']`).click(function(){
+                $(`button[data-questions-id='${childKey}']`).click(function(){
                     database.ref('questions/' + USER_ID + "/" + childKey).remove();
                     $(this).parent().remove();
                 });              
@@ -34,10 +34,10 @@ $(document).ready(function(){
         $('.timeline').prepend(`
             <div>
                 <span>${newPost}</span>
-                <input type='button' value='Excluir' data-questions-id=${questionsFromDB.key} />
+                <button data-questions-id=${questionsFromDB.key} >Excluir</button>
             </div>`);
     
-        $(`input[data-questions-id=${questionsFromDB.key}]`).click(function(){
+        $(`button[data-questions-id=${questionsFromDB.key}]`).click(function(){
             $(this).parent().remove();
         });
 
