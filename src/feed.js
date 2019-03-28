@@ -13,11 +13,17 @@ $(document).ready(function(){
                         <span>${childData.text}</span>
                         <button data-questions-id=${childKey} > Excluir </button>
                     </div>
-                `);  
+                `);               
+                
                 $(`button[data-questions-id='${childKey}']`).click(function(){
-                    database.ref('questions/' + USER_ID + "/" + childKey).remove();
-                    $(this).parent().remove();
-                });              
+                    let apagar = confirm('Deseja realmente excluir este registro?');
+                    if (apagar){
+                        database.ref('questions/' + USER_ID + "/" + childKey).remove();
+                        $(this).parent().remove();      		
+                    }else{
+                        event.preventDefault();
+                    }	
+                });        
             });
         });
 
@@ -37,21 +43,27 @@ $(document).ready(function(){
                 <button data-questions-id=${questionsFromDB.key} >Excluir</button>
             </div>`);
     
-        $(`button[data-questions-id=${questionsFromDB.key}]`).click(function(){
-            database.ref('questions/' + USER_ID + "/" + questionsFromDB.key).remove();
-            $(this).parent().remove();
+        $(`button[data-questions-id=${questionsFromDB.key}]`).click(function(event) {
+            let apagar = confirm('Deseja realmente excluir este registro?');
+            if (apagar){
+                database.ref('questions/' + USER_ID + "/" + questionsFromDB.key).remove();
+                $(this).parent().remove();      		
+            }else{
+                event.preventDefault();
+            }	
         });
 
         $('.post').val('');
     });
 
-    $('.post').keyup(function(){
+        $('.post').keyup(function(){
         if ($('.post').val == '') {
             $('#buttonPost').attr('disabled', true);
             return;
         }
         $('#buttonPost').attr('disabled', false);
     });
+
 });
 
 
