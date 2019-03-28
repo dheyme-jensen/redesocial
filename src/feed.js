@@ -32,13 +32,24 @@ $(document).ready(() => {
 
         $('#timeLine').prepend(`
             <div>
-                <span>${newPost}</span>
-                <input type='button' value='Excluir' data-task-id=${taskFromDB.key} />
+                <span data-text-id="${taskFromDB.key}">${newPost}</span>
+                <input type='button' value='Excluir' data-delete-id="${taskFromDB.key}" />
+                <input type='button' value='Editar' data-edit-id="${taskFromDB.key}" />
             </div>
         `);
     
-        $(`input[data-task-id='${taskFromDB.key}']`).click(() => {
+        $(`input[data-delete-id='${taskFromDB.key}']`).click(() => {
             $(this).closest('div').remove();
+        });
+        $('#post').val('');
+
+        $(`input[data-edit-id='${taskFromDB.key}']`).click(() => {
+           let newText =  prompt(`altere seu texto: ${newPost}`);
+           $(`span[data-text-id=${taskFromDB.key}]`).html(newText);
+           database.ref('questions/' + taskFromDB.key).update({
+               newPost: newText
+           })
+           
         });
         $('#post').val('');
     });
