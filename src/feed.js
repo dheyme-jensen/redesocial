@@ -1,50 +1,51 @@
 const database = firebase.database();
 let USER_ID = window.location.search.match(/\?id=(.*)/)[1];
 
-$(document).ready(() => {
+$(document).ready(function(){
     
     database.ref('questions/' + USER_ID).once('value')
-        .then((snapshot) => {
-            snapshot.forEach((childSnapshot) => {
+        .then(function(snapshot){
+            snapshot.forEach(function(childSnapshot){
                 let childKey = childSnapshot.key;
                 let childData = childSnapshot.val();
-                $('#timeLine').prepend(`
+                $('.timeline').prepend(`
                     <div>
                         <span>${childData.text}</span>
-                        <input type='button' value='Excluir' data-task-id=${childKey} />
+                        <input type='button' value='Excluir' data-questions-id=${childKey} />
                     </div>
                 `);  
-                $(`input[data-task-id='${childKey}']`).click(() => {
+                $(`input[data-questions-id='${childKey}']`).click(function(){
+                    database.ref('questions/' + USER_ID + "/" + childKey).remove();
                     $(this).parent().remove();
                 });              
             });
         });
 
-    $('#form-post').submit((e) => {
+    $('#form-post').submit(function(e){
         e.preventDefault();
         $('#buttonPost').attr('disabled', true);
 
-        let newPost = $('#post').val(); 
+        let newPost = $('.post').val(); 
 
-        let taskFromDB = database.ref('questions/' + USER_ID).push({
+        let questionsFromDB = database.ref('questions/' + USER_ID).push({
             text: newPost
         });
 
-        $('#timeLine').prepend(`
+        $('.timeline').prepend(`
             <div>
                 <span>${newPost}</span>
-                <input type='button' value='Excluir' data-task-id=${taskFromDB.key} />
-            </div>
-        `);
+                <input type='button' value='Excluir' data-questions-id=${questionsFromDB.key} />
+            </div>`);
     
-        $(`input[data-task-id='${taskFromDB.key}']`).click(() => {
-            $(this).closest('div').remove();
+        $(`input[data-questions-id=${questionsFromDB.key}]`).click(function(){
+            $(this).parent().remove();
         });
-        $('#post').val('');
+
+        $('.post').val('');
     });
 
-    $('#post').keyup(() => {
-        if ($('#post').val == '') {
+    $('.post').keyup(function(){
+        if ($('.post').val == '') {
             $('#buttonPost').attr('disabled', true);
             return;
         }
