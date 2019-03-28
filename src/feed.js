@@ -38,6 +38,7 @@ $(document).ready(function(){
             </div>`);
     
         $(`button[data-questions-id=${questionsFromDB.key}]`).click(function(){
+            database.ref('questions/' + USER_ID + "/" + questionsFromDB.key).remove();
             $(this).parent().remove();
         });
 
