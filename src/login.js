@@ -1,17 +1,15 @@
-$('#botao').click(function() {
-    let userEmail = document.querySelector('.email').value;
-    let password = document.querySelector('.password-field').value;
-    console.log('im still out')
+$('.signup-button').click(function (e) {
+    
+    e.preventDefault();
+
+    let userEmail = $('.email').val();
+    let password = $('.password-field').val();
 
     firebase.auth().signInWithEmailAndPassword(userEmail, password)
         .then(function (response) {
-            console.log('im here')
             window.location = "feed.html?id=" + response.user.uid;
-            console.log('i passed')
-        }), (function (error) {
-            if (error.code === 'auth/account-exists-with-different-credential') {
-                $('#myModal').modal('show')
-            }
+        })
+        .catch(function (error) {
             window.alert('Error: ' + error.code);
         })
 })
