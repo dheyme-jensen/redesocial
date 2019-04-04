@@ -5,7 +5,6 @@ $(document).ready(function(){
     getQuenstionsDB();
     $('#form-post').submit(addQuestionsClick);
     buttonPost();
-    modalEventListener();
 });
 
 function addQuestionsClick(e) {
@@ -92,16 +91,6 @@ function deletePost(key){
     });
 };
 
-// function editPost(key, text){
-//     $(`button[data-edit-id='${key}']`).click(function(){
-//         let newText =  prompt(`altere seu texto: ${text}`);
-//         $(`span[data-text-id=${key}]`).text(newText);
-//             database.ref(`questions/${USER_ID}/${key}`).update({
-//             text: newText
-//         });           
-//     });
-// };
-
 function editPost(key) {
     $('#example-modal').on('show.bs.modal', function (event) {        
         var button = $(event.relatedTarget);
@@ -113,6 +102,7 @@ function editPost(key) {
         modal.find('.modal-input').val(ask);
         modal.find('.modal-key').val(dataEditId);
     });
+    modalEventListener();
 };
 
 function modalEventListener() {
@@ -133,6 +123,6 @@ function modalEventListener() {
         modal.modal('hide');
     });
 };
- 
+
 
 
