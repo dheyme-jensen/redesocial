@@ -182,12 +182,14 @@ margin-bottom: 2em;
     background-repeat: no-repeat;
     color: #666666;
     font-family: 'Roboto', sans-serif;
+    margin-top: 2em;
   }
   
-  input.email, input.text.w3lpass {
+  /* input.email, input.text.w3lpass {
     margin: 2em 0;
   }
-  
+   */
+   
   .text:focus, .text:valid {
     box-shadow: none;
     outline: none;
@@ -683,3 +685,8 @@ margin-bottom: 2em;
     }
   }
 
+  .password-error, .email-error,
+  .password-confirmation, .password-status{
+    font-size: 1em;
+    color: #ff0000;
+  }

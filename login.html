@@ -22,7 +22,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Este e-mail já está cadastrado.</p>
+                    <p class="error-message"></p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
@@ -34,11 +34,14 @@
     <div class="main-w3layouts wrapper">
         <div class="main-agileinfo">
             <div class="agileits-top">
+                <h1>GrowUp</h1>
                 <form class="signup-form">
                     <input id="signup-email" class="text email" type="email" name="email" placeholder="Email"
                         required="">
+                    <span class="email-error"></span>
                     <input id="signup-password" class="password-field text" type="password" name="password"
-                        placeholder="Password" required="">
+                        placeholder="Senha" required="">
+                        <span class="password-error"></span>
                     <input id="botao" class="signup-button" type="submit" value="ENTRAR">
                 </form>
                 <p>-ou-</p>

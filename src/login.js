@@ -1,5 +1,5 @@
 $('.signup-button').click(function (e) {
-    
+
     e.preventDefault();
 
     let userEmail = $('.email').val();
@@ -10,9 +10,19 @@ $('.signup-button').click(function (e) {
             window.location = "feed.html?id=" + response.user.uid;
         })
         .catch(function (error) {
-            window.alert('Error: ' + error.code);
+            getError(error.code)
         })
 })
+
+
+function getError(error) {
+    if (error === 'auth/wrong-password') {
+        $('.password-error').text('Senha incorreta');
+    } else if (error === 'auth/user-not-found') {
+        $('.email-error').text('E-mail não cadastrado');
+    }
+}
+
 
 $('.google-auth').click(function () {
     base_provider = new firebase.auth.GoogleAuthProvider();
@@ -52,4 +62,12 @@ $('.facebook-auth').click(function () {
     }).catch(function (error) {
         console.log(error)
     })
+})
+
+$('.password-field').keyup(() => {
+    $('.password-error').text('');
+})
+
+$('.email').keyup(() => {
+    $('.email-error').text('');
 })
