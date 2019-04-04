@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/login.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/signup.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 
 <body>
@@ -35,18 +35,17 @@
         <div class="main-agileinfo">
             <div class="agileits-top">
                 <form class="signup-form">
+                    <input id="signup-user-name" class="text" type="text" name="Username" placeholder="Username"
+                        required="">
                     <input id="signup-email" class="text email" type="email" name="email" placeholder="Email"
                         required="">
                     <input id="signup-password" class="password-field text" type="password" name="password"
                         placeholder="Password" required="">
-                    <input id="botao" class="signup-button" type="submit" value="ENTRAR">
+                    <input class="password-confirmation-field text w3lpass" type="password" name="password"
+                        placeholder="Confirm Password" required="">
+                    <input class="signup-button" type="submit" value="SIGNUP">
                 </form>
-                <p>-ou-</p>
-                <div class="social-networks">
-                        <button class="facebook-auth"><i class="fab fa-facebook-square"></i></button>
-                        <button class="google-auth"><i class="fab fa-google"></i></button>
-                    </div>
-                <p>Ainda não tem uma conta? <a href="signup.html"> Cadastre-se agora!</a></p>
+                <p>Already have an Account? <a href="login.html"> Login Now!</a></p>
             </div>
         </div>
         <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
@@ -61,10 +60,8 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
-        <script src="src/login.js"></script>
+        <script src="src/signup.js"></script>
         <script src="src/connection.js"></script>
 </body>
 
 </html>
-
-
