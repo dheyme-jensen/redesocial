@@ -1,20 +1,28 @@
-$('#botao').click(function() {
-    let userEmail = document.querySelector('.email').value;
-    let password = document.querySelector('.password-field').value;
-    console.log('im still out')
+$('.signup-button').click(function (e) {
+
+    e.preventDefault();
+
+    let userEmail = $('.email').val();
+    let password = $('.password-field').val();
 
     firebase.auth().signInWithEmailAndPassword(userEmail, password)
         .then(function (response) {
-            console.log('im here')
             window.location = "feed.html?id=" + response.user.uid;
-            console.log('i passed')
-        }), (function (error) {
-            if (error.code === 'auth/account-exists-with-different-credential') {
-                $('#myModal').modal('show')
-            }
-            window.alert('Error: ' + error.code);
+        })
+        .catch(function (error) {
+            getError(error.code)
         })
 })
+
+
+function getError(error) {
+    if (error === 'auth/wrong-password') {
+        $('.password-error').text('Senha incorreta');
+    } else if (error === 'auth/user-not-found') {
+        $('.email-error').text('E-mail não cadastrado');
+    }
+}
+
 
 $('.google-auth').click(function () {
     base_provider = new firebase.auth.GoogleAuthProvider();
@@ -54,4 +62,12 @@ $('.facebook-auth').click(function () {
     }).catch(function (error) {
         console.log(error)
     })
+})
+
+$('.password-field').keyup(() => {
+    $('.password-error').text('');
+})
+
+$('.email').keyup(() => {
+    $('.email-error').text('');
 })

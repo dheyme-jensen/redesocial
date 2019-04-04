@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/signup.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/login.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
@@ -25,7 +25,6 @@
                     <p>Este e-mail já está cadastrado.</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
                     <button type="button" class="btn btn-primary">Fazer login</button>
                 </div>
             </div>
@@ -35,17 +34,19 @@
         <div class="main-agileinfo">
             <div class="agileits-top">
                 <form class="signup-form">
-                    <input id="signup-user-name" class="text" type="text" name="Username" placeholder="Username"
+                    <input id="signup-user-name" class="text" type="text" name="Username" placeholder="Nome"
                         required="">
                     <input id="signup-email" class="text email" type="email" name="email" placeholder="Email"
                         required="">
                     <input id="signup-password" class="password-field text" type="password" name="password"
-                        placeholder="Password" required="">
+                        placeholder="Senha" required="">
+                    <span class="password-status"></span>
                     <input class="password-confirmation-field text w3lpass" type="password" name="password"
-                        placeholder="Confirm Password" required="">
-                    <input class="signup-button" type="submit" value="SIGNUP">
+                        placeholder="Confirmar Senha" required="">
+                    <span class="password-confirmation"></span>
+                    <input class="signup-button" type="submit" value="CADASTRAR">
                 </form>
-                <p>Already have an Account? <a href="login.html"> Login Now!</a></p>
+                <p>Já tem uma conta? <a href="login.html"> Entre aqui!</a></p>
             </div>
         </div>
         <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
