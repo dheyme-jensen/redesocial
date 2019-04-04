@@ -1,1 +1,22 @@
+body{
+    margin-top:20px;
+    background:#ebeef0;
+}
+
+.img-sm {
+    max-width: 100%;
+}
+
+.panel-body {
+    padding: 25px 20px;
+}
+
+.mar-top {
+    margin-top: 15px;
+}
+
+.no-pad {
+    padding-right: 0;
+}
+
 
