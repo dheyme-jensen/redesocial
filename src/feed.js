@@ -18,6 +18,7 @@ function addQuestionsClick(e) {
     deletePost(questionsFromDB.key);
     editPost(questionsFromDB.key);
     likeDislike();
+    
 };
 
 function addQuestionsDB(text) {
@@ -44,8 +45,9 @@ function getQuenstionsDB() {
                 let childData = childSnapshot.val();
                 createPost(childKey, childData.text);
                 deletePost(childKey);
-                editPost(childKey);   
-                likeDislike();       
+                editPost(childKey);  
+                likeDislike(); 
+     
             });
         });
 };
@@ -87,12 +89,12 @@ function createPost(key, text) {
 
 function likeDislike () {
     $(".like").click(function () {
-        var input = $(this).find('.qty1');
+        let input = $(this).find('.qty1');
         input.val(parseInt(input.val())+ 1);
 
     });
    $(".dislike").click(function () {
-        var input = $(this).find('.qty2');
+        let input = $(this).find('.qty2');
         input.val(input.val() - 1);
     });
 };
@@ -151,7 +153,7 @@ function getQuenstionsDB() {
                 createPost(childKey, childData.text);
                 deletePost(childKey);
                 editPost(childKey);  
-                likeDislike();        
+                    
             });
         });
 };
@@ -194,12 +196,12 @@ function createPost(key, text) {
 
 function likeDislike () {
     $(".like").click(function () {
-        var input = $(this).find('.qty1');
+        let input = $(this).find('.qty1');
         input.val(parseInt(input.val())+ 1);
 
     });
    $(".dislike").click(function () {
-        var input = $(this).find('.qty2');
+        let input = $(this).find('.qty2');
         input.val(input.val() - 1);
     });
 };
@@ -258,6 +260,3 @@ function modalEventListener() {
     });
 };
  
-
-{/* <a class="btn btn-sm btn-default btn-hover-success" data-fa fa-thumbs-up-count="0" href="#"><i class="fa fa-thumbs-up">0 curtidas</i></a>
-                <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a> */}
