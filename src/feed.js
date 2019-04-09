@@ -14,7 +14,7 @@ function addQuestionsClick(e) {
     let newPost = $('#post').val(); 
     let questionsFromDB = addQuestionsDB(newPost);
     
-    createPost(questionsFromDB.key, newPost);
+    createPost(questionsFromDB.key, newPost, 0);
     deletePost(questionsFromDB.key);
     editPost(questionsFromDB.key);
     likeDislike(questionsFromDB.key);
