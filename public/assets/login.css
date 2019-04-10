@@ -1,0 +1,47 @@
+
+
+  .google-auth, .facebook-auth{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.0); 
+}
+
+.link{
+ font-size: 0.9rem
+}
+
+.form-container{
+background-color: rgb(255, 255, 255, .93);
+}
+
+.fa-facebook-square{
+    color: #3b5998;
+    font-size: 3em;
+    padding: 0 5px;
+}
+
+.fa-google{
+    color: #ea4335;
+    font-size: 3em;
+    padding: 0 5px;
+}
+
+.social-networks{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+  body {
+    background-image: url("/assets/img/login_bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .password-error, .email-error,
+  .password-confirmation, .password-status{
+    font-size: 1em;
+    color: #ff0000;
+  }
