@@ -26,7 +26,7 @@ Sendo assim uma rede para dois tipos de usuários: aquele que está enfrentando 
 ![](public/assets/img/prot-2.png)
 
 ### Testes
-<p>Com a realização dos testes do produto no HTML foi identificada a necessidade de realizar algumas alterações no layout para incluir todos as funcionalidades necessárias. Como por exemplo, a substituição de um botão de excluir e editar para um select com essas opções. Pois os usuários acharam que o post estava ficando muito “poluído”.</p>
+<p>Com a realização dos testes do produto no HTML foi identificada a necessidade de realizar algumas alterações no layout para incluir todos as funcionalidades necessárias. Como por exemplo, a substituição de um botão de excluir e editar para um select com essas opções. Pois os usuários acharam que o post estava ficando muito “poluído” e também a criação de um botão de logout.</p>
 
 ### Divulgação
 <p>Para divulgar o Grow Up foi pensado na estratégia de fechar parcerias com canais do Youtube de tutoriais e também em grupos de Facebook voltados para esse público.</p>
