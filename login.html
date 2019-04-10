@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/login.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body>
@@ -31,43 +32,47 @@
             </div>
         </div>
     </div>
-    <div class="main-w3layouts wrapper">
-        <div class="main-agileinfo">
-            <div class="agileits-top">
-                <h1>GrowUp</h1>
-                <form class="signup-form">
-                    <input id="signup-email" class="text email" type="email" name="email" placeholder="Email"
-                        required="">
-                    <span class="email-error"></span>
-                    <input id="signup-password" class="password-field text" type="password" name="password"
-                        placeholder="Senha" required="">
-                        <span class="password-error"></span>
-                    <input id="botao" class="signup-button" type="submit" value="ENTRAR">
-                </form>
-                <p>-ou-</p>
-                <div class="social-networks">
-                        <button class="facebook-auth"><i class="fab fa-facebook-square"></i></button>
-                        <button class="google-auth"><i class="fab fa-google"></i></button>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-12"></div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <form class="form-container p-5 mt-5">
+                    <h1 class="text-center mb-4">GrowUp</h1>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="email@example.com">
                     </div>
-                <p>Ainda não tem uma conta? <a href="signup.html"> Cadastre-se agora!</a></p>
+                    <div class="form-group mb-5">
+                        <input type="password" class="form-control" placeholder="Senha">
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block mb-3">ENTRAR</button>
+                    <div class="social-networks my-5">
+                            <button class="facebook-auth"><i class="fab fa-facebook-square"></i></button>
+                            <button class="google-auth"><i class="fab fa-google"></i></button>
+                        </div>
+                    <p class="link text-center">Ainda não tem uma conta?</p>
+                    <p class="link text-center"><a href="signup.html"> Cadastre-se agora!</a></p>
+                    <form>
             </div>
+            <div class="col-md-4 col-sm-4 col-xs-12"></div>
         </div>
-        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-            crossorigin="anonymous"></script>
-        <script src="src/login.js"></script>
-        <script src="src/connection.js"></script>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="src/login.js"></script>
+    <script src="src/connection.js"></script>
 </body>
 
 </html>
-
-
