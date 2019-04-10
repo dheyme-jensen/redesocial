@@ -16,7 +16,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
+                    <h5 class="modal-title">Alerta</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -34,23 +34,21 @@
         <div class="row">
             <div class="col-md-4 col-sm-4 col-xs-12"></div>
             <div class="col-md-4 col-sm-4 col-xs-12">
-                <form class="form-container p-5 mt-5">
-                    <input class="form-control form-group" type="text" name="Username" placeholder="Nome" required="">
-                    <input class="form-control form-group mt-4" type="email" name="email" placeholder="Email" required="">
-                    <input class="form-control form-group mt-4" type="password" name="password" placeholder="Senha" required="">
+                <form class="signup-form form-container p-5 mt-5">
+                    <input id="signup-user-name" class="form-control form-group" type="text" name="Username" placeholder="Nome" required="">
+                    <input id="signup-email" class="form-control form-group mt-4" type="email" name="email" placeholder="Email" required="">
+                    <input id="signup-password" class="password-field form-control form-group mt-4" type="password" name="password" placeholder="Senha" required="">
                     <span class="password-status"></span>
-                    <input class="form-control form-group mt-4" type="password" name="password" placeholder="Confirmar Senha" required="">
+                    <input class="password-cofirmation-field form-control form-group mt-4" type="password" name="password" placeholder="Confirmar Senha" required="">
                     <span class="password-confirmation"></span>
-                    <button type="submit" class="btn btn-success btn-block my-5">ENTRAR</button>
+                    <button type="submit" class="signup-button btn btn-success btn-block my-5">ENTRAR</button>
                     <p class="link text-center mt-5">Já tem uma conta?</p>
-                    <p class="link text-center"><a href="signup.html"> Entre agora!</a></p>
+                    <p class="link text-center"><a href="index.html"> Entre agora!</a></p>
                 </form>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12"></div>
         </div>
     </div>
-
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>

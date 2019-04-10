@@ -11,13 +11,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
-
 <body>
     <div id="myModal" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -32,7 +30,6 @@
             </div>
         </div>
     </div>
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4 col-sm-4 col-xs-12"></div>
@@ -40,12 +37,14 @@
                 <form class="form-container p-5 mt-5">
                     <h1 class="text-center mb-4">GrowUp</h1>
                     <div class="form-group">
-                        <input type="email" class="form-control" placeholder="email@example.com">
+                        <input id="signup-email" type="email" class="email form-control" placeholder="email@example.com">
+                        <span class="email-error"></span>
                     </div>
                     <div class="form-group mb-5">
-                        <input type="password" class="form-control" placeholder="Senha">
+                        <input type="password" class="password-field form-control" placeholder="Senha">
+                        <span class="password-error"></span>
                     </div>
-                    <button type="submit" class="btn btn-success btn-block mb-3">ENTRAR</button>
+                    <button type="submit" class="signup-button btn btn-success btn-block mb-3">ENTRAR</button>
                     <div class="social-networks my-5">
                             <button class="facebook-auth"><i class="fab fa-facebook-square"></i></button>
                             <button class="google-auth"><i class="fab fa-google"></i></button>
@@ -57,8 +56,6 @@
             <div class="col-md-4 col-sm-4 col-xs-12"></div>
         </div>
     </div>
-
-
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
