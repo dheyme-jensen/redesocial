@@ -4,6 +4,7 @@ Rede social é uma plataforma que conecta pessoas para que elas possam interagir
 <p>De acordo com o relatório “Digital in 2018: The Americas”, divulgado pelas empresas We are Social e Hootsuite, foi constatado que 62% da população brasileira está ativa nas redes sociais. Também há outro relatório, do site We Are Social, que aponta que diariamente os brasileiros ficam em média 3h39 online e que o número de novos usuários em rede sociais só aumenta a cada ano.</p>
 
 # Grow Up
+[CLique aqui para acessar](https://redesocial-6219f.firebaseapp.com/)
 <p>Grow Up é uma rede social que tem como objetivo ajudar pessoas que saíram da casa dos pais há pouco tempo e foram morar sozinhas. Com essa rede social, elas postam dúvidas de problemas que estão enfrentando para que outros usuários que já passaram por esse problema possam ajudá-las. 
 Sendo assim uma rede para dois tipos de usuários: aquele que está enfrentando dificuldades e aquele já passou pelo mesmo problema e tem conhecimento para ajudar.</p>
 
