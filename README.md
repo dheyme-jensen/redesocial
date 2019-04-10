@@ -12,14 +12,20 @@ Sendo assim uma rede para dois tipos de usuários: aquele que está enfrentando 
 ![](public/assets/img/marcelo-persona.png)
 
 ### Pesquisa
-Segue resultado da pesquisa utilizada para identificar as necessidades dos usuários:
-ANEXO
+<p>Segue resultado da pesquisa utilizada para identificar as necessidades dos usuários:</p>
+![](public/assets/img/form-1.png)
+![](public/assets/img/form-2.png)
+![](public/assets/img/form-3.png)
+![](public/assets/img/form-4.png)
 
 ### Protótipo
-ANEXO
+<p>Segue link para o protótipo desenvolvido: [Protótipo](https://www.figma.com/proto/UWwRd46Mawe9coHzOR4pb8kZ/Login?node-id=3%3A2&scaling=scale-down)</p>
+
+![](public/assets/img/prot-1.png)
+![](public/assets/img/prot-2.png)
 
 ### Testes
-Com a realização dos testes do produto no HTML foi identificada a necessidade de realizar algumas alterações no layout para incluir todos as funcionalidades necessárias. Como por exemplo, a substituição de um botão de excluir e editar para um select com essas opções. Pois os usuários acharam que o post estava ficando muito “poluído”.
+<p>Com a realização dos testes do produto no HTML foi identificada a necessidade de realizar algumas alterações no layout para incluir todos as funcionalidades necessárias. Como por exemplo, a substituição de um botão de excluir e editar para um select com essas opções. Pois os usuários acharam que o post estava ficando muito “poluído”.</p>
 
 ### Divulgação
-Para divulgar o Grow Up foi pensado na estratégia de fechar parcerias com canais do Youtube de tutoriais e também em grupos de Facebook voltados para esse público.
+<p>Para divulgar o Grow Up foi pensado na estratégia de fechar parcerias com canais do Youtube de tutoriais e também em grupos de Facebook voltados para esse público.</p>
