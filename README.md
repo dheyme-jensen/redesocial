@@ -13,13 +13,14 @@ Sendo assim uma rede para dois tipos de usuários: aquele que está enfrentando 
 
 ### Pesquisa
 <p>Segue resultado da pesquisa utilizada para identificar as necessidades dos usuários:</p>
+
 ![](public/assets/img/form-1.png)
 ![](public/assets/img/form-2.png)
 ![](public/assets/img/form-3.png)
 ![](public/assets/img/form-4.png)
 
 ### Protótipo
-<p>Segue link para o protótipo desenvolvido: [Protótipo](https://www.figma.com/proto/UWwRd46Mawe9coHzOR4pb8kZ/Login?node-id=3%3A2&scaling=scale-down)</p>
+[Protótipo](https://www.figma.com/proto/UWwRd46Mawe9coHzOR4pb8kZ/Login?node-id=3%3A2&scaling=scale-down)
 
 ![](public/assets/img/prot-1.png)
 ![](public/assets/img/prot-2.png)
