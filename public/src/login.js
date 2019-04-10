@@ -14,7 +14,6 @@ $('.signup-button').click(function (e) {
         })
 })
 
-
 function getError(error) {
     if (error === 'auth/wrong-password') {
         $('.password-error').text('Senha incorreta');
@@ -22,7 +21,6 @@ function getError(error) {
         $('.email-error').text('E-mail não cadastrado');
     }
 }
-
 
 $('.google-auth').click(function () {
     base_provider = new firebase.auth.GoogleAuthProvider();
