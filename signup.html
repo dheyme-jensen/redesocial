@@ -30,39 +30,40 @@
             </div>
         </div>
     </div>
-    <div class="main-w3layouts wrapper">
-        <div class="main-agileinfo">
-            <div class="agileits-top">
-                <form class="signup-form">
-                    <input id="signup-user-name" class="text" type="text" name="Username" placeholder="Nome"
-                        required="">
-                    <input id="signup-email" class="text email" type="email" name="email" placeholder="Email"
-                        required="">
-                    <input id="signup-password" class="password-field text" type="password" name="password"
-                        placeholder="Senha" required="">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-12"></div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <form class="form-container p-5 mt-5">
+                    <input class="form-control form-group" type="text" name="Username" placeholder="Nome" required="">
+                    <input class="form-control form-group" type="email" name="email" placeholder="Email" required="">
+                    <input class="form-control form-group" type="password" name="password" placeholder="Senha" required="">
                     <span class="password-status"></span>
-                    <input class="password-confirmation-field text w3lpass" type="password" name="password"
-                        placeholder="Confirmar Senha" required="">
+                    <input class="form-control form-group" type="password" name="password" placeholder="Confirmar Senha" required="">
                     <span class="password-confirmation"></span>
-                    <input class="signup-button" type="submit" value="CADASTRAR">
+                    <button type="submit" class="btn btn-success btn-block mb-3">ENTRAR</button>
+                    <p class="link text-center">Ainda não tem uma conta?</p>
+                    <p class="link text-center"><a href="signup.html"> Cadastre-se agora!</a></p>
                 </form>
-                <p>Já tem uma conta? <a href="login.html"> Entre aqui!</a></p>
             </div>
+            <div class="col-md-4 col-sm-4 col-xs-12"></div>
         </div>
-        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-            crossorigin="anonymous"></script>
-        <script src="src/signup.js"></script>
-        <script src="src/connection.js"></script>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="src/connection.js"></script>
+    <script src="src/signup.js"></script>
+
 </body>
 
 </html>
