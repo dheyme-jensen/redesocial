@@ -18,7 +18,7 @@ function addQuestionsClick(e) {
     let privacy = $('.privacy-select').val();
     let category = $('.category-select').val();
     let date = moment().format('D MMM YY');
-    let questionsFromDB = addQuestionsDB(newPost, privacy, category, date);
+    let questionsFromDB = addQuestionsDB(newPost, privacy, category, date, 0);
     getQuenstionsDB();
     deletePost(questionsFromDB.key);
     editPost(questionsFromDB.key);
@@ -69,7 +69,7 @@ function getQuenstionsDB() {
 function createPost(key, text, privacy, category, date, name, likeCounter) {
 
     $('#timeline').prepend(`
-    <article class="media-block bg-white my-4" data-article='${key}'>
+    <article class="media-block bg-white my-2" data-article='${key}'>
         <div class="d-flex">
             <figure class="p-3">
                 <img class="rounded-circle img-circle" src="/assets/img/woman.png" alt="">
@@ -90,14 +90,13 @@ function createPost(key, text, privacy, category, date, name, likeCounter) {
                    </header>
                 </div>
                 <p class="post py-2" data-text-id='${key}'>${text}</p>
-                <div class="btn-group pull-right">            
-                <a class="like" data-like-id='${key}'><i class="fa fa-thumbs-o-up"></i>  
+                <div class="btn-group pull-right m-2">            
+                <a class="like" data-like-id='${key}'><i class="fas fa-thumbs-up"></i> 
                 Like <input data-like-id='${key}' class="qty1" name="qty1" readonly="readonly" type="text" value= ${likeCounter}>
               </a>
             </div>
             </div>
         </div>
-  
     </article>
     `)
     $('#post').val('');
@@ -178,8 +177,6 @@ function setUserName(name) {
     console.log('aqui')
 } 
 
-
-
 function likeDislike (key) {
     $(`a[data-like-id='${key}']`).click(function(){
         let input = $(this).find('.qty1');
@@ -187,5 +184,4 @@ function likeDislike (key) {
         input.val(counter);
         database.ref(`questions/${USER_ID}/${key}`).update({likeCounter: counter}); 
     });
-    
 };

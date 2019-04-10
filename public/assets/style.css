@@ -54,26 +54,29 @@ body{
 }
 
 .category-select{
-    font-size: 0.9rem
+    font-size: 0.9rem;
+    width: 20%;
 }
 
-.like, .dislike {
+.like {
     display: inline-block;
     margin-bottom: 0;
     font-weight: normal;
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
-    background: lightgreen;
+    background: darkcyan;
     border: 1px solid transparent;
     white-space: nowrap;
     padding: 6px 12px;
     font-size: 14px;
     line-height: 1.428571429;
     border-radius: 4px;
+    color: #fff!important;
 }
-.qty1, .qty2 {
+.qty1 {
     border: none;
     width:20px;
     background: transparent;
+    color: #fff!important;
 }
