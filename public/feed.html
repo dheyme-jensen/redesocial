@@ -15,13 +15,15 @@
     <link rel="stylesheet" href="assets/style.css">
     <title>Rede Social</title>
 </head>
-
 <body>
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-2 col-md-2"></div>
             <div class="col-lg-8 col-md-8">
                 <main class="mx-auto bg-white">
+                    <div class="pull-right">
+                        <button id="logout" class="m-3 btn btn-outline-danger">Sair</button>
+                    </div>
                     <form class="p-3" id="form-post">
                         <div class="d-flex">
                             <figure>
@@ -34,7 +36,7 @@
                                 <option value="Geral" >Categoria</option>
                                 <option>Culinária</option>
                                 <option>Limpeza</option>
-                                <option>Compras</option>
+                                <option>Manutenção</option>
                             </select>
                             <select class="custom-select custom-select-sm privacy-select mx-1">
                                 <option value="public">Público</option>
@@ -54,13 +56,9 @@
                 </main>
                 <section id="timeline" class="d-flex flex-column-reverse"></section>
             </div>
-            <div class="col-lg-2 col-md-2"></div>
-        </div>
-
-    </div>
-
-
-
+            <div class="col-md-2 col-sm-4 col-xs-12"></div>
+        </div>  
+    </div>  
     <div class="modal" id="example-modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -81,6 +79,7 @@
             </div>
         </div>
     </div>
+    
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

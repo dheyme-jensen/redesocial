@@ -1,5 +1,3 @@
-window.onload = function () {
-}
 
 const database = firebase.database();
 let USER_ID = window.location.search.match(/\?id=(.*)/)[1];
@@ -8,6 +6,7 @@ $(document).ready(function () {
     getQuenstionsDB();
     $('#form-post').submit(addQuestionsClick);
     buttonPost();
+    logout();
 });
 
 function addQuestionsClick(e) {
@@ -59,7 +58,7 @@ function getQuenstionsDB() {
                     createPost(childKey, childData.text, childData.privacy, childData.category, childData.date, name, childData.likeCounter);
                     deletePost(childKey);
                     editPost(childKey);
-                    likeDislike(childKey);
+                    likeDislike(childKey);                    
                 });
 
             });
@@ -174,14 +173,20 @@ function getUser() {
 
 function setUserName(name) {
     $('.user-name').text = name;
-    console.log('aqui')
-} 
+};
 
-function likeDislike (key) {
-    $(`a[data-like-id='${key}']`).click(function(){
+function likeDislike(key) {
+    $(`a[data-like-id='${key}']`).click(function() {
         let input = $(this).find('.qty1');
         let counter = parseInt(input.val())+ 1
         input.val(counter);
         database.ref(`questions/${USER_ID}/${key}`).update({likeCounter: counter}); 
+    });   
+};
+
+function logout() {
+    $('#logout').click(function() {
+        window.location = "index.html?"
     });
 };
+
