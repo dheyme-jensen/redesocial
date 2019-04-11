@@ -16,7 +16,7 @@ function createUser(name, email, password){
     firebase.auth().createUserWithEmailAndPassword(email, password)
     
     .then(function (cred) {
-        crateUserProfile(name, email, cred.user.uid);
+        crateUserProfile(name, cred.user.uid);
         window.location = `feed.html?id=${cred.user.uid}`;
     })
     
@@ -28,10 +28,9 @@ function createUser(name, email, password){
     })
 }
 
-function crateUserProfile(name, email, uid) {
+function crateUserProfile(name, uid) {
     database.ref('users/' + uid).set({
-        name: name,
-        email: email
+        name: name
     })
 }
 

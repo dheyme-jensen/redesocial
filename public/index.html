@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        
 </head>
 <body>
     <div id="myModal" class="modal" tabindex="-1" role="dialog">
@@ -32,12 +32,13 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4 col-sm-4 col-xs-12"></div>
-            <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="col-lg-4 col-md-4"></div>
+            <div class="col-lg-4 col-md-4">
                 <form class="form-container p-5 mt-5">
                     <h1 class="text-center mb-4">GrowUp</h1>
                     <div class="form-group">
-                        <input id="signup-email" type="email" class="email form-control" placeholder="email@example.com">
+                        <input id="signup-email" type="email" class="email form-control"
+                            placeholder="email@example.com">
                         <span class="email-error"></span>
                     </div>
                     <div class="form-group mb-5">
@@ -46,19 +47,18 @@
                     </div>
                     <button type="submit" class="signup-button btn btn-success btn-block mb-3">ENTRAR</button>
                     <div class="social-networks my-5">
-                            <button class="facebook-auth"><i class="fab fa-facebook-square"></i></button>
-                            <button class="google-auth"><i class="fab fa-google"></i></button>
-                        </div>
+                        <button class="google-auth"><img class="google-btn"></img></button>
+                    </div>
                     <p class="link text-center">Ainda não tem uma conta?</p>
                     <p class="link text-center"><a href="signup.html"> Cadastre-se agora!</a></p>
                     <form>
             </div>
-            <div class="col-md-4 col-sm-4 col-xs-12"></div>
+            <div class="col-lg-4 col-md-4"></div>
         </div>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -68,8 +68,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-        <script src="src/connection.js"></script>
-        <script src="src/login.js"></script>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.2&appId=674057469677695&autoLogAppEvents=1"></script>
+    <script src="src/connection.js"></script>
+    <script src="src/login.js"></script>
 </body>
-
 </html>

@@ -35,7 +35,7 @@ function addQuestionsDB(text, privacy, category, date) {
 
 function buttonPost() {
     $('#post').keyup(function () {
-        if ($('#post').val() == '') {
+        if ($('#post').val() === '') {
             $('#buttonPost').attr('disabled', true);
             return;
         }
@@ -186,7 +186,9 @@ function likeDislike(key) {
 
 function logout() {
     $('#logout').click(function() {
-        window.location = "index.html?"
+        firebase.auth().signOut()  
+        .then(() => { window.location = "index.html?"})
+        .catch((error) => {console.error(error)});
     });
 };
 

@@ -1,3 +1,5 @@
+const database = firebase.database();
+
 $('.signup-button').click(function (e) {
     e.preventDefault();
 
@@ -21,44 +23,17 @@ function getError(error) {
     }
 }
 
-$('.google-auth').click(function () {
+$('.google-auth').click(function (e) {
+    e.preventDefault();
     base_provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(base_provider)
         .then(function (response) {
+            crateUserProfile(response.user.displayName,  response.user.uid); 
             window.location = "feed.html?id=" + response.user.uid;
         })
         .catch(function (error) {
             console.log(error)
         })
-})
-
-window.fbAsyncInit = function () {
-    FB.init({
-        appId: '415264915702182',
-        cookie: true,
-        xfbml: true,
-        version: 'v2.8'
-    });
-
-    FB.AppEvents.logPageView();
-};
-
-(function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) { return; }
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-
-$('.facebook-auth').click(function () {
-    base_provider = new firebase.auth.FacebookAuthProvider();
-    firebase.auth().signInWithPopup(base_provider).then(function (response) {
-        window.location = "feed.html?id=" + response.user.uid;
-        console.log('Success')
-    }).catch(function (error) {
-        console.log(error)
-    })
 })
 
 $('.password-field').keyup(() => {
@@ -68,3 +43,9 @@ $('.password-field').keyup(() => {
 $('.email').keyup(() => {
     $('.email-error').text('');
 })
+
+function crateUserProfile(name, uid) {
+    database.ref('users/' + uid).set({
+        name: name
+    })
+}
