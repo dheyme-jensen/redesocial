@@ -1,0 +1,16 @@
+body{
+    margin-top:20px;
+    background:#ebeef0;
+}
+
+.img-sm {
+    max-width: 100%;
+}
+
+.mar-top {
+    margin-top: 15px;
+}
+
+.no-pad {
+    padding-right: 0;
+}
